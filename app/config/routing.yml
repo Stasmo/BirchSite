@@ -1,0 +1,3 @@
+# BirchBundle routes
+_birch_site:
+    resource: "@StasmoBirchBundle/Resources/config/routing.yml"

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset={{ _charset }}"/>
+        <title>{% block title %}{% endblock %}</title>
+        {% stylesheets 
+            '@StasmoBirchBundle/Resources/public/css/bootstrap.min.css'
+            '@StasmoBirchBundle/Resources/public/css/birch.css'
+            '@StasmoBirchBundle/Resources/public/css/lightbox.css'
+            filter='cssrewrite' %}
+        <link rel="stylesheet" href="{{ asset_url }}" />
+        {% endstylesheets %}
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+        {% javascripts
+            '@StasmoBirchBundle/Resources/public/js/bootstrap.min.js'
+            '@StasmoBirchBundle/Resources/public/js/birch.js'
+            '@StasmoBirchBundle/Resources/public/js/lightbox-2.6.min.js' %}
+        <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+
+        {% block head %}{% endblock %}
+    </head>
+    <body data-spy="scroll" data-target="#main-navbar" data-offset="50">
+        <div id="content" class="container">
+            <nav id="main-navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+                <div id="nav-container">
+                    <ul class="nav navbar-nav nav-justified">
+                        <li class="active"><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#quote">Quote</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+            <div id="home" class="header text-center">
+                <div id='landing' style="background-image: url('bundles/stasmobirch/images/landing.jpg');"/>
+            </div>
+
+            <div id="body">
+                {% block body %}{% endblock %}
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,219 @@
+{% extends "StasmoBirchBundle::layout.html.twig" %}
+
+{% block body %}
+<div id="about" class="block">
+	<div class="row">
+	  <div class="col-md-6 hidden-sm">
+	  	<img src="//placekitten.com/600/701" class="img-rounded img-responsive">
+	  </div>
+	  <div class="col-md-6">
+
+		<div class="row">
+		  <div class="col-md-12">
+		  	<h1>
+		  		Services
+		  	</h1>
+		  </div>
+		</div>
+
+		<div class="row">
+		  <div class="col-md-12">
+		  	<p class="text-body lead">
+		  		Birch Bartending has got all your drinking needs covered—from classics, vintage, themed or 
+				non-alcoholic. We’re here to make the bar at your event pop, to create a unique experience for 
+				you and your guests.
+		    </p>
+		  </div>
+		</div>
+
+		<div class="row">
+		  <div class="col-md-12">
+		  	<h1>
+		  		Bartending
+		  	</h1>
+		  	<p class="text-body lead">
+		  		Why make it complicated? We’re all about keeping our clients in the loop and offering quick quotes 
+
+				and responses. That way we can explore what works best for you, polish up the details and look 
+
+				forward to the event. Our bartenders are good-natured, upbeat and professional. We handle the 
+
+				set-up and take-down of the bar and quickly acquaint ourselves with the venue at hand.
+		  	</p>
+
+		  	<p class="text-body lead">
+		  		We offer cash bar, open bar, and toonie bar for payment options.
+		  	</p>
+
+		  	<p class="text-body lead">
+		  		PLUS: we love bar snacks and offer them at all our parties free of charge.
+		  	</p>
+		  </div>
+		</div>
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="col-md-12">
+	  	
+		<div class="row">
+		  <div class="col-md-12">
+		  	<h1>
+		  		Complimentary Consumption Calculation
+		  	</h1>
+		  	<p class="text-body lead">
+		  		Tell us how many people you’re expecting and let us gauge how much booze we’ll need. Fill us 
+
+				in on any quirks or patterns you know about your invitees’ tastes.
+		  	</p>	
+		  </div>
+		</div>
+
+		<div class="row">
+		  <div class="col-md-12">
+		  	<h1>
+		  		Birch Beverage Menu
+		  	</h1>
+		  	<p class="text-body lead">
+		  		Looking to sip on something truly unique? <a href="#">Browse our drink menu</a> for a taste of what we can 
+
+				serve up. Once you have confirmed your booking, we offer a complimentary 30-minute session 
+
+				for you to sample some of our specialty drinks. We do this to give people a chance to try things 
+
+				they’ve never had before settling on a menu.
+		  	</p>	
+		  </div>
+		</div>
+
+	  </div>
+	  <div class="col-md-12 text-center">
+		<div class="row">
+		  <div class="col-xs-6 col-sm-4">
+		  	<a href="bundles/stasmobirch/images/album/1.jpg" data-lightbox="album">
+		  		<img src="bundles/stasmobirch/images/thumbs/1.jpg" class="img-thumbnail img-responsive">
+		    </a>
+		  </div>
+		  <div class="col-xs-6 col-sm-4">
+		  	<a href="bundles/stasmobirch/images/album/2.jpg" data-lightbox="album">
+	  	  		<img src="bundles/stasmobirch/images/thumbs/2.jpg" class="img-thumbnail img-responsive">
+		  	</a>
+	  	  </div>
+		  <div class="hidden-xs col-sm-4">
+		  	<a href="bundles/stasmobirch/images/album/3.jpg" data-lightbox="album">
+		  		<img src="bundles/stasmobirch/images/thumbs/3.jpg" class="img-thumbnail img-responsive">
+		  	</a>
+		  </div>
+	  	</div>
+		<div class="row">
+		  <div class="col-xs-6 col-sm-4">
+		  	<a href="bundles/stasmobirch/images/album/4.jpg" data-lightbox="album">
+	  	  		<img src="bundles/stasmobirch/images/thumbs/4.jpg" class="img-thumbnail img-responsive">
+		  	</a>
+	  	  </div>
+		  <div class="col-xs-6 col-sm-4">
+		  	<a href="bundles/stasmobirch/images/album/5.jpg" data-lightbox="album">
+	  	  		<img src="bundles/stasmobirch/images/thumbs/5.jpg" class="img-thumbnail img-responsive">
+	  	    </a>
+	  	  </div>
+		  <div class="hidden-xs col-sm-4">
+		  	<a href="bundles/stasmobirch/images/album/6.jpg" data-lightbox="album">
+		  		<img src="bundles/stasmobirch/images/thumbs/6.jpg" class="img-thumbnail img-responsive">
+		  	</a>
+		  </div>
+	  	</div>
+	  </div>
+	</div>
+
+	<div class="row">
+	  <div class="col-md-12">
+	  	<h1>
+	  	  Entertainment
+	  	</h1>
+	    <p class="text-body lead">
+	      Need a videographer? Photographer? How about a DJ?
+
+		  We’ve got friends and collaborators with different skill sets who may just be a perfect fit for your 
+
+		  event.
+	    </p>
+	  </div>
+	</div>
+
+</div>
+
+<div id="quote" class="block">
+	<div class="row">
+	  <div class="col-md-12">
+	  	<h1 class="text-center">Get A Quote</h1>
+	  </div>
+	</div>
+	<div class="row">
+	  <div class="col-md-6">
+		<div class="row">
+			<div id="quote-form">
+				{{ form_start(form) }}
+				    {{ form_errors(form) }}
+				    <div>
+				        {{ form_errors(form.name) }}
+				    </div>
+				    <div>
+				        {{ form_widget(form.name, {'attr': {'class': 'form-control', 'placeholder': 'Name'}}) }}
+				    </div>
+				    <div>
+				        {{ form_errors(form.phoneNumber) }}
+				    </div>
+				    <div>
+				        {{ form_widget(form.phoneNumber, {'attr': {'class': 'form-control', 'placeholder': 'Phone Number'}}) }}
+				    </div>
+				    <div>
+				        {{ form_errors(form.emailAddress) }}
+				    </div>
+				    <div>
+				        {{ form_widget(form.emailAddress, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
+				    </div>
+				    <div>
+				        {{ form_errors(form.eventDate) }}
+				    </div>
+				    <div class="form-group">
+				        {{ form_label(form.eventDate) }}
+				        {{ form_widget(form.eventDate) }}
+				    </div>
+					{{ form_widget(form.eventType) }}
+				    
+
+				    <div>
+				        {{ form_errors(form.eventStart) }}
+				    </div>
+				    <div class="form-group">
+				    	<label>Event Hours</label>
+				    	<div class="row">
+				    		<div class="col-sm-6">
+				    			<div class="form-group">
+				    				<label>From:</label>
+				    				{{ form_widget(form.eventStart) }}
+				    			</div>
+				    		</div>
+				    		<div class="col-sm-6">
+				    			<div class="form-group">
+				    				<label>To:</label>
+				        			{{ form_widget(form.eventEnd) }}
+				    			</div>
+				    		</div>
+				    	</div>
+				    </div>
+				    <div class="form-group">
+				        {{ form_label(form.numberOfGuests) }}
+				        {{ form_widget(form.numberOfGuests) }}
+				    </div>
+				{{ form_end(form) }}
+			</div>	
+		</div>
+	  </div>
+	  <div class="col-md-6">
+	  	<img src="//placekitten.com/600/600" class="img-rounded img-responsive">
+	  </div>
+	</div>
+</div>
+
+{% endblock %}
