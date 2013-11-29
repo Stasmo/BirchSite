@@ -55,6 +55,10 @@ body{
 	font-size: 2.5em;
 }
 
+#quote-form .control-label{
+	text-align: left;
+}
+
 .block > .row {
 	padding: 50px 0 50px 0;
 }

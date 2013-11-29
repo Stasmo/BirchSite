@@ -4,17 +4,14 @@
         <meta http-equiv="Content-Type" content="text/html; charset={{ _charset }}"/>
         <title>{% block title %}{% endblock %}</title>
         <link href='http://fonts.googleapis.com/css?family=Roboto+Slab|Roboto' rel='stylesheet' type='text/css'>
-        {% stylesheets 
-            '@StasmoBirchBundle/Resources/public/css/bootstrap.min.css'
+        <link href="{{ asset('/css/bootstrap.css') }}" rel="stylesheet" media="screen">
+        {% stylesheets
             '@StasmoBirchBundle/Resources/public/css/birch.css'
             '@StasmoBirchBundle/Resources/public/css/lightbox.css'
             filter='cssrewrite' %}
         <link rel="stylesheet" href="{{ asset_url }}" />
         {% endstylesheets %}
-        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-        <script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
         {% javascripts
-            '@StasmoBirchBundle/Resources/public/js/bootstrap.min.js'
             '@StasmoBirchBundle/Resources/public/js/birch.js'
             '@StasmoBirchBundle/Resources/public/js/lightbox-2.6.min.js' %}
         <script type="text/javascript" src="{{ asset_url }}"></script>
@@ -35,12 +32,19 @@
                 </div>
             </nav>
             <div id="home" class="header text-center">
-                <div id='landing' style="background-image: url('bundles/stasmobirch/images/landing.jpg');"/>
+                {% image '@StasmoBirchBundle/Resources/public/images/landing.jpg' %}
+                <div id='landing' style="background-image: url('{{ asset_url }}');"/>
+                {% endimage %}
             </div>
 
             <div id="body">
                 {% block body %}{% endblock %}
             </div>
+
+            <!-- jQuery (necessary for Bootstraps JavaScript plugins) -->
+            <script src="https://code.jquery.com/jquery.js"></script>
+            <!-- Include all JavaScripts, compiled by Assetic -->
+            <script src="{{ asset('/js/bootstrap.js') }}"></script>
         </div>
     </body>
 </html>

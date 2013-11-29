@@ -3,35 +3,33 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "30cfcbdd53c5737d71826dbe42988308",
+    "hash": "14d86be87854f5ae2f5407475c66d74a",
     "packages": [
         {
             "name": "braincrafted/bootstrap-bundle",
-            "version": "dev-master",
-            "target-dir": "Bc/Bundle/BootstrapBundle",
+            "version": "2.0.x-dev",
+            "target-dir": "Braincrafted/Bundle/BootstrapBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/braincrafted/bootstrap-bundle.git",
-                "reference": "c086ff70f6746ae4290ba50a68b6ab159925ceaa"
+                "reference": "19ea787c36df7c18b9a3dcd724b1ba7bb33c84ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/braincrafted/bootstrap-bundle/zipball/c086ff70f6746ae4290ba50a68b6ab159925ceaa",
-                "reference": "c086ff70f6746ae4290ba50a68b6ab159925ceaa",
+                "url": "https://api.github.com/repos/braincrafted/bootstrap-bundle/zipball/19ea787c36df7c18b9a3dcd724b1ba7bb33c84ea",
+                "reference": "19ea787c36df7c18b9a3dcd724b1ba7bb33c84ea",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": ">=5.3.3",
+                "symfony/symfony": ">=2.3"
             },
             "require-dev": {
-                "instaclick/php-code-sniffer": "dev-master",
-                "instaclick/symfony2-coding-standard": "dev-master",
-                "knplabs/knp-markdown-bundle": "dev-master",
-                "knplabs/knp-menu": "dev-master",
-                "knplabs/knp-menu-bundle": "dev-master",
+                "knplabs/knp-menu": "~2.0@alpha",
+                "knplabs/knp-menu-bundle": "~2.0@alpha",
                 "knplabs/knp-paginator-bundle": "dev-master",
-                "nikic/php-parser": "dev-master",
-                "phpmd/phpmd": "1.4.*"
+                "mockery/mockery": "0.8.*",
+                "phpunit/phpunit": "3.7.*"
             },
             "suggest": {
                 "knplabs/knp-menu": "Required to use KnpMenuBundle.",
@@ -42,7 +40,7 @@
             "type": "symfony-bundle",
             "autoload": {
                 "psr-0": {
-                    "Bc\\Bundle\\BootstrapBundle": ""
+                    "Braincrafted\\Bundle\\BootstrapBundle": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -57,11 +55,11 @@
                     "role": "Developer"
                 }
             ],
-            "description": "Twitter Bootstrap for Symfony2",
+            "description": "BraincraftedBootstrapBundle integrates Bootstrap into Symfony2 by providing templates, Twig extensions, services and commands.",
             "keywords": [
                 "bootstrap"
             ],
-            "time": "2013-07-28 21:51:00"
+            "time": "2013-11-28 20:24:38"
         },
         {
             "name": "doctrine/annotations",
@@ -103,7 +101,8 @@
                 {
                     "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/"
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
                 },
                 {
                     "name": "Guilherme Blanco",
@@ -175,7 +174,7 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
                     "homepage": "http://www.jwage.com/",
                     "role": "Creator"
@@ -194,7 +193,7 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
-                    "name": "Johannes Schmitt",
+                    "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
                     "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
@@ -242,9 +241,10 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/"
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
                 },
                 {
                     "name": "Guilherme Blanco",
@@ -316,7 +316,8 @@
                 {
                     "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/"
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
                 },
                 {
                     "name": "Guilherme Blanco",
@@ -386,7 +387,8 @@
                 {
                     "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/"
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
                 },
                 {
                     "name": "Guilherme Blanco",
@@ -511,9 +513,10 @@
             ],
             "authors": [
                 {
-                    "name": "Jonathan Wage",
+                    "name": "Jonathan H. Wage",
                     "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/"
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
                 },
                 {
                     "name": "Guilherme Blanco",
@@ -529,9 +532,9 @@
                     "email": "kontakt@beberlei.de"
                 },
                 {
-                    "name": "Johannes Schmitt",
+                    "name": "Johannes M. Schmitt",
                     "email": "schmittjoh@gmail.com",
-                    "homepage": "https://github.com/schmittjoh",
+                    "homepage": "http://jmsyst.com",
                     "role": "Developer of wrapped JMSSerializerBundle"
                 }
             ],
@@ -643,7 +646,8 @@
                 {
                     "name": "Jonathan Wage",
                     "email": "jonwage@gmail.com",
-                    "homepage": "http://www.jwage.com/"
+                    "homepage": "http://www.jwage.com/",
+                    "role": "Creator"
                 },
                 {
                     "name": "Guilherme Blanco",
@@ -719,16 +723,16 @@
         },
         {
             "name": "jdorn/sql-formatter",
-            "version": "v1.2.9",
+            "version": "v1.2.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jdorn/sql-formatter.git",
-                "reference": "bd1f09133f6dbbe0713856910e58ea9480c2be58"
+                "reference": "8859d664737492d313c34796731b35eca851b362"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/bd1f09133f6dbbe0713856910e58ea9480c2be58",
-                "reference": "bd1f09133f6dbbe0713856910e58ea9480c2be58",
+                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/8859d664737492d313c34796731b35eca851b362",
+                "reference": "8859d664737492d313c34796731b35eca851b362",
                 "shasum": ""
             },
             "require": {
@@ -765,7 +769,7 @@
                 "highlight",
                 "sql"
             ],
-            "time": "2013-04-26 18:42:52"
+            "time": "2013-11-27 22:51:13"
         },
         {
             "name": "jquery/jquery",
@@ -1517,6 +1521,48 @@
             "time": "2013-11-14 07:58:51"
         },
         {
+            "name": "twbs/bootstrap",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "56f4cf0316b03af888c22c62e4ef24e437b4a370"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/56f4cf0316b03af888c22c62e4ef24e437b4a370",
+                "reference": "56f4cf0316b03af888c22c62e4ef24e437b4a370",
+                "shasum": ""
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0.x-dev"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "Apache-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jacob Thornton",
+                    "email": "jacobthornton@gmail.com"
+                },
+                {
+                    "name": "Mark Otto",
+                    "email": "markdotto@gmail.com"
+                }
+            ],
+            "description": "Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.",
+            "homepage": "http://getbootstrap.com",
+            "keywords": [
+                "bootstrap",
+                "css"
+            ],
+            "time": "2013-11-28 19:38:28"
+        },
+        {
             "name": "twig/extensions",
             "version": "v1.0.1",
             "source": {
@@ -1621,7 +1667,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "braincrafted/bootstrap-bundle": 20
+        "braincrafted/bootstrap-bundle": 20,
+        "twbs/bootstrap": 20
     },
     "platform": {
         "php": ">=5.3.3"

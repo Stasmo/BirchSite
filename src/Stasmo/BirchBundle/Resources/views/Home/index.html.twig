@@ -15,6 +15,7 @@
 	    </p>
 	  </div>
 	</div>		
+	<hr>
 	<div class="row">
 	  <div class="col-md-8 col-xs-12 col-md-offset-2">
 	  	<h1>
@@ -39,10 +40,11 @@
 	  	</p>
 	  </div>
 	</div>
+	<hr>
 	<div class="row">
 
 	  <div class="col-md-12 hidden-sm hidden-xs">
-	  	<img src="//placekitten.com/400/300" class="img-rounded img-responsive" style="margin: 0 auto">
+	  	<img src="//placekitten.com/300/200" class="img-rounded img-responsive" style="margin: 0 auto">
 	  </div>
 	  <div class="col-md-6">
 
@@ -50,7 +52,7 @@
 
 	  </div>
 	</div>
-
+	<hr>
 	<div class="row">
 	  <div class="col-md-8 col-xs-12 col-md-offset-2">
 	  	<h1>
@@ -63,7 +65,7 @@
 	  	</p>	
 	  </div>
 	</div>
-
+	<hr>
 	<div class="row">
 	  <div class="col-md-8 col-xs-12 col-md-offset-2">
 	  	<h1>
@@ -80,8 +82,7 @@
 	  	</p>	
 	  </div>
 	</div>
-
-
+	<hr>
 	<div class="row">
 	  <div class="col-md-8 col-xs-12 col-md-offset-2">
 	  	<h1>
@@ -100,35 +101,53 @@
 	  <div class="col-md-12 text-center">
 		<div class="row">
 		  <div class="col-xs-6 col-sm-4">
-		  	<a href="bundles/stasmobirch/images/album/1.jpg" data-lightbox="album">
-		  		<img src="bundles/stasmobirch/images/thumbs/1.jpg" class="img-thumbnail img-responsive">
-		    </a>
-		  </div>
+            {% image '@StasmoBirchBundle/Resources/public/images/album/1.jpg' %}
+		  	<a href="{{ asset_url }}" data-lightbox="album">
+		  	{% endimage %}
+            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/1.jpg' %}
+		  		<img src="{{ asset_url }}" class="img-thumbnail img-responsive">
+		  	{% endimage %}		  </div>
 		  <div class="col-xs-6 col-sm-4">
-		  	<a href="bundles/stasmobirch/images/album/2.jpg" data-lightbox="album">
-	  	  		<img src="bundles/stasmobirch/images/thumbs/2.jpg" class="img-thumbnail img-responsive">
-		  	</a>
+            {% image '@StasmoBirchBundle/Resources/public/images/album/2.jpg' %}
+		  	<a href="{{ asset_url }}" data-lightbox="album">
+		  	{% endimage %}
+            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/2.jpg' %}
+		  		<img src="{{ asset_url }}" class="img-thumbnail img-responsive">
+		  	{% endimage %}
 	  	  </div>
 		  <div class="hidden-xs col-sm-4">
-		  	<a href="bundles/stasmobirch/images/album/3.jpg" data-lightbox="album">
-		  		<img src="bundles/stasmobirch/images/thumbs/3.jpg" class="img-thumbnail img-responsive">
-		  	</a>
+            {% image '@StasmoBirchBundle/Resources/public/images/album/3.jpg' %}
+		  	<a href="{{ asset_url }}" data-lightbox="album">
+		  	{% endimage %}
+            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/3.jpg' %}
+		  		<img src="{{ asset_url }}" class="img-thumbnail img-responsive">
+		  	{% endimage %}
 		  </div>
 	  	</div>
 		<div class="row">
 		  <div class="col-xs-6 col-sm-4">
-		  	<a href="bundles/stasmobirch/images/album/4.jpg" data-lightbox="album">
-	  	  		<img src="bundles/stasmobirch/images/thumbs/4.jpg" class="img-thumbnail img-responsive">
-		  	</a>
+            {% image '@StasmoBirchBundle/Resources/public/images/album/4.jpg' %}
+		  	<a href="{{ asset_url }}" data-lightbox="album">
+		  	{% endimage %}
+            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/4.jpg' %}
+		  		<img src="{{ asset_url }}" class="img-thumbnail img-responsive">
+		  	{% endimage %}
 	  	  </div>
 		  <div class="col-xs-6 col-sm-4">
-		  	<a href="bundles/stasmobirch/images/album/5.jpg" data-lightbox="album">
-	  	  		<img src="bundles/stasmobirch/images/thumbs/5.jpg" class="img-thumbnail img-responsive">
-	  	    </a>
+            {% image '@StasmoBirchBundle/Resources/public/images/album/5.jpg' %}
+		  	<a href="{{ asset_url }}" data-lightbox="album">
+		  	{% endimage %}
+            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/5.jpg' %}
+		  		<img src="{{ asset_url }}" class="img-thumbnail img-responsive">
+		  	{% endimage %}
 	  	  </div>
 		  <div class="hidden-xs col-sm-4">
-		  	<a href="bundles/stasmobirch/images/album/6.jpg" data-lightbox="album">
-		  		<img src="bundles/stasmobirch/images/thumbs/6.jpg" class="img-thumbnail img-responsive">
+            {% image '@StasmoBirchBundle/Resources/public/images/album/6.jpg' %}
+		  	<a href="{{ asset_url }}" data-lightbox="album">
+		  	{% endimage %}
+            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/6.jpg' %}
+		  		<img src="{{ asset_url }}" class="img-thumbnail img-responsive">
+		  	{% endimage %}
 		  	</a>
 		  </div>
 	  	</div>
@@ -140,65 +159,49 @@
 <div id="quote" class="block">
 	<div class="row">
 	  <div class="col-md-6">
-		<div class="row">
-	  		<h1 class="text-center">Get A Quote</h1>
-			<div id="quote-form">
-				{{ form_start(form) }}
-				    {{ form_errors(form) }}
-				    <div>
+	  	<h1 class="text-center">Get A Quote</h1>
+		  <div class="row text-left">
+		  	<div id="quote-form" class="col-xs-12">
+			{{ form_start(form, { 'style': 'horizontal' }) }}
+			    {{ form_errors(form) }}
+			    <div class="form-group row">
+			    	<div class="col-xs-12">
 				        {{ form_errors(form.name) }}
+				        {{ form_widget(form.name, {'attr': {'placeholder': 'Name'}}) }}
 				    </div>
-				    <div>
-				        {{ form_widget(form.name, {'attr': {'class': 'form-control', 'placeholder': 'Name'}}) }}
-				    </div>
-				    <div>
+			    </div>
+			    <div class="form-group row">
+			    	<div class="col-xs-12">
 				        {{ form_errors(form.phoneNumber) }}
+				        {{ form_widget(form.phoneNumber, {'attr': {'placeholder': 'Phone Number'}}) }}
 				    </div>
-				    <div>
-				        {{ form_widget(form.phoneNumber, {'attr': {'class': 'form-control', 'placeholder': 'Phone Number'}}) }}
-				    </div>
-				    <div>
+			    </div>
+			    <div class="form-group row">
+			    	<div class="col-xs-12">
 				        {{ form_errors(form.emailAddress) }}
+				        {{ form_widget(form.emailAddress, {'attr': {'placeholder': 'Email'}}) }}
 				    </div>
-				    <div>
-				        {{ form_widget(form.emailAddress, {'attr': {'class': 'form-control', 'placeholder': 'Email'}}) }}
-				    </div>
-				    <div>
-				        {{ form_errors(form.eventDate) }}
-				    </div>
-				    <div class="form-group">
-				        {{ form_label(form.eventDate) }}
-				        {{ form_widget(form.eventDate) }}
-				    </div>
-					{{ form_widget(form.eventType) }}
-				    
-
-				    <div>
-				        {{ form_errors(form.eventStart) }}
-				    </div>
-				    <div class="form-group">
-				    	<label>Event Hours</label>
-				    	<div class="row">
-				    		<div class="col-sm-6">
-				    			<div class="form-group">
-				    				<label>From:</label>
-				    				{{ form_widget(form.eventStart) }}
-				    			</div>
-				    		</div>
-				    		<div class="col-sm-6">
-				    			<div class="form-group">
-				    				<label>To:</label>
-				        			{{ form_widget(form.eventEnd) }}
-				    			</div>
-				    		</div>
-				    	</div>
-				    </div>
-				    <div class="form-group">
-				        {{ form_label(form.numberOfGuests) }}
-				        {{ form_widget(form.numberOfGuests) }}
-				    </div>
-				{{ form_end(form) }}
-			</div>	
+			    </div>
+			    <div class="row">
+					<div class="col-xs-12 col-sm-8">
+						<h3>Hours</h3>
+						{{ form_row(form.eventDate, { 'label_col': 4, 'widget_col': 8}) }}
+						{{ form_row(form.eventStart, { 'label_col': 4, 'widget_col': 8}) }}
+						{{ form_row(form.eventEnd, { 'label_col': 4, 'widget_col': 8}) }}
+						{{ form_row(form.numberOfGuests, { 'label_col': 4, 'widget_col': 3}) }}
+					</div>
+					<div class="col-xs-12 col-sm-4">
+						<h3>Event Type</h3>
+						{{ form_widget(form.eventType) }}
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-xs-12 text-center">
+						<input class="btn" disabled="disabled" type="submit"></input>
+					</div>
+				</div>
+			{{ form_end(form) }}
+			</div>
 		</div>
 	  </div>
 	  <div class="col-md-6">
@@ -210,14 +213,17 @@
 <div id="contact" class="block">
 	<div class="row">
 		<div class="col-sm-12">
-			<p>Connect with us</p>
+			<h4>Connect with us</h4>
 			<p>
-			<img src="//placekitten.com/100/100" class="img-rounded social-media">
-			<!--<img src="bundles/stasmobirch/images/thumbs/email.png" class="img-rounded img-responsive center-img">-->
-			<img src="//placekitten.com/100/100" class="img-rounded social-media">
-			<!--<img src="bundles/stasmobirch/images/thumbs/facebook.png" class="img-rounded img-responsive center-img">-->
-			<img src="//placekitten.com/100/100" class="img-rounded social-media">
-			<!--<img src="bundles/stasmobirch/images/thumbs/twitter.png" class="img-rounded img-responsive center-img">-->
+            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/FaceBook.png' %}
+			<img src="{{ asset_url }}" class="img-rounded social-media">
+			{% endimage %}
+            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/Twitter.png' %}
+			<img src="{{ asset_url }}" class="img-rounded social-media">
+			{% endimage %}
+            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/Mail.png' %}
+			<img src="{{ asset_url }}" class="img-rounded social-media">
+			{% endimage %}
 			</p>
 		</div>
 	</div>
