@@ -40,19 +40,16 @@
 	  	</p>
 	  </div>
 	</div>
-	<hr>
-	<div class="row">
+	<hr class=" hidden-sm hidden-xs">
+	<div class="row hidden-sm hidden-xs">
 
-	  <div class="col-md-12 hidden-sm hidden-xs">
-	  	<img src="//placekitten.com/300/200" class="img-rounded img-responsive" style="margin: 0 auto">
-	  </div>
-	  <div class="col-md-6">
-
-
-
+	  <div class="col-md-6 col-md-offset-3">
+        {% image '@StasmoBirchBundle/Resources/public/images/new1.jpg' %}
+	  	<img src="{{asset_url}}" class="img-rounded img-responsive" style="margin: 0 auto">
+	  	{% endimage %}
 	  </div>
 	</div>
-	<hr>
+	<hr class=" hidden-sm hidden-xs">
 	<div class="row">
 	  <div class="col-md-8 col-xs-12 col-md-offset-2">
 	  	<h1>
@@ -106,7 +103,8 @@
 		  	{% endimage %}
             {% image '@StasmoBirchBundle/Resources/public/images/thumbs/1.jpg' %}
 		  		<img src="{{ asset_url }}" class="img-thumbnail img-responsive">
-		  	{% endimage %}		  </div>
+		  	{% endimage %}		  
+		  </div>
 		  <div class="col-xs-6 col-sm-4">
             {% image '@StasmoBirchBundle/Resources/public/images/album/2.jpg' %}
 		  	<a href="{{ asset_url }}" data-lightbox="album">
@@ -157,9 +155,9 @@
 </div>
 
 <div id="quote" class="block">
+	<h1 class="text-center">Get A Quote</h1>
 	<div class="row">
 	  <div class="col-md-6">
-	  	<h1 class="text-center">Get A Quote</h1>
 		  <div class="row text-left">
 		  	<div id="quote-form" class="col-xs-12">
 			{{ form_start(form, { 'style': 'horizontal' }) }}
@@ -197,15 +195,17 @@
 				</div>
 				<div class="row">
 					<div class="col-xs-12 text-center">
-						<input class="btn" disabled="disabled" type="submit"></input>
+						<input class="btn" type="submit"></input>
 					</div>
 				</div>
 			{{ form_end(form) }}
 			</div>
 		</div>
 	  </div>
-	  <div class="col-md-6">
-	  	<img src="//placekitten.com/400/400" class="img-rounded img-responsive" style="margin: 0 auto">
+	  <div class="col-md-6 hidden-xs hidden-sm">
+	  	{% image '@StasmoBirchBundle/Resources/public/images/new2.jpg'%}
+	  	<img src="{{ asset_url }}" class="img-rounded img-responsive" style="margin: 0 auto">
+	  	{% endimage %}
 	  </div>
 	</div>
 </div>

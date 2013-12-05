@@ -36,11 +36,10 @@ body{
 
 #content nav a{
 	color: #FFF;
-	background: #125935;
 }
 
 #content nav{
-	background: none;
+	background: #125935;
 	border: none;
 }
 
@@ -80,14 +79,15 @@ body{
 
 
 /* Small devices (tablets, 768px and up) */
-@media (min-width: 768px) { }
+@media (min-width: 768px) {
+#content nav .navbar-nav, #content nav .navbar-nav>li{
+	float: none;
+}
+ }
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 
-#content nav .navbar-nav, #content nav .navbar-nav>li{
-	float: none;
-}
  }
 
 /* Large devices (large desktops, 1200px and up) */

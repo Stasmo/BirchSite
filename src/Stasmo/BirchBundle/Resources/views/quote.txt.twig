@@ -1,0 +1,8 @@
+Name: {{ form.name }}
+Event type: {{ form.eventType }}
+Phone number: {{ form.phoneNumber }}
+Event date: {{ form.eventDate|date('d/m/Y') }}
+Number of guests: {{ form.numberOfGuests }}
+Event start: {{ form.eventStart|date('H:i') }}
+Event end: {{ form.eventEnd|date('H:i') }}
+Email address: {{ form.emailAddress }}
