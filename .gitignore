@@ -7,4 +7,4 @@
 **/**/.DS_Store
 composer.phar
 *.sublime-*
-
+/node_modules/*

@@ -1,0 +1,270 @@
+<?php
+
+namespace Stasmo\BirchBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
+
+/**
+ * Config
+ *
+ * @ORM\Table()
+ * @ORM\Entity(repositoryClass="Stasmo\BirchBundle\Entity\ConfigRepository")
+ */
+class Config
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="ShowFacebook", type="boolean", nullable=true)
+     */
+    private $showFacebook;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="ShowTwitter", type="boolean", nullable=true)
+     */
+    private $showTwitter;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="ShowMenu", type="boolean", nullable=true)
+     */
+    private $showMenu;
+
+    private $menuFile;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="MenuFileLocation", type="string", length=255, nullable=true)
+     */
+    private $menuFileLocation;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="TwitterLink", type="string", length=255, nullable=true)
+     */
+    private $twitterLink;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="FacebookLink", type="string", length=255, nullable=true)
+     */
+    private $facebookLink;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="LastUpdated", type="datetime", nullable=true)
+     */
+    private $lastUpdated;
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set showFacebook
+     *
+     * @param boolean $showFacebook
+     * @return Config
+     */
+    public function setShowFacebook($showFacebook)
+    {
+        $this->showFacebook = $showFacebook;
+    
+        return $this;
+    }
+
+    /**
+     * Get showFacebook
+     *
+     * @return boolean 
+     */
+    public function getShowFacebook()
+    {
+        return $this->showFacebook;
+    }
+
+    /**
+     * Set showTwitter
+     *
+     * @param boolean $showTwitter
+     * @return Config
+     */
+    public function setShowTwitter($showTwitter)
+    {
+        $this->showTwitter = $showTwitter;
+    
+        return $this;
+    }
+
+    /**
+     * Get showTwitter
+     *
+     * @return boolean 
+     */
+    public function getShowTwitter()
+    {
+        return $this->showTwitter;
+    }
+
+    /**
+     * Set showMenu
+     *
+     * @param boolean $showMenu
+     * @return Config
+     */
+    public function setShowMenu($showMenu)
+    {
+        $this->showMenu = $showMenu;
+    
+        return $this;
+    }
+
+    /**
+     * Get showMenu
+     *
+     * @return boolean 
+     */
+    public function getShowMenu()
+    {
+        return $this->showMenu;
+    }
+
+    /**
+     * Set menuFile
+     *
+     * @param UploadedFile $menuFile
+     * @return Config
+     */
+    public function setMenuFile(UploadedFile $menuFile)
+    {
+        $this->menuFile = $menuFile;
+    
+        return $this;
+    }
+
+    /**
+     * Get menuFile
+     *
+     * @return UploadedFile 
+     */
+    public function getMenuFile()
+    {
+        return $this->menuFile;
+    }
+
+    /**
+     * Set twitterLink
+     *
+     * @param string $twitterLink
+     * @return Config
+     */
+    public function setTwitterLink($twitterLink)
+    {
+        $this->twitterLink = $twitterLink;
+    
+        return $this;
+    }
+
+    /**
+     * Get twitterLink
+     *
+     * @return string 
+     */
+    public function getTwitterLink()
+    {
+        return $this->twitterLink;
+    }
+
+    /**
+     * Set facebookLink
+     *
+     * @param string $facebookLink
+     * @return Config
+     */
+    public function setFacebookLink($facebookLink)
+    {
+        $this->facebookLink = $facebookLink;
+    
+        return $this;
+    }
+
+    /**
+     * Get facebookLink
+     *
+     * @return string 
+     */
+    public function getFacebookLink()
+    {
+        return $this->facebookLink;
+    }
+
+    /**
+     * Set lastUpdated
+     *
+     * @param \DateTime $lastUpdated
+     * @return Config
+     */
+    public function setLastUpdated($lastUpdated)
+    {
+        $this->lastUpdated = $lastUpdated;
+    
+        return $this;
+    }
+
+    /**
+     * Get lastUpdated
+     *
+     * @return \DateTime 
+     */
+    public function getLastUpdated()
+    {
+        return $this->lastUpdated;
+    }
+
+    /**
+     * Set menuFileLocation
+     *
+     * @param string $menuFileLocation
+     * @return Config
+     */
+    public function setMenuFileLocation($menuFileLocation)
+    {
+        $this->menuFileLocation = $menuFileLocation;
+    
+        return $this;
+    }
+
+    /**
+     * Get menuFileLocation
+     *
+     * @return string 
+     */
+    public function getMenuFileLocation()
+    {
+        return $this->menuFileLocation;
+    }
+}

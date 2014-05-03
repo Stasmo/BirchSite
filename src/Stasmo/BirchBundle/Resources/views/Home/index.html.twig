@@ -62,6 +62,7 @@
 	  	</p>	
 	  </div>
 	</div>
+	{% if config.showMenu %}
 	<hr>
 	<div class="row">
 	  <div class="col-md-8 col-xs-12 col-md-offset-2">
@@ -69,7 +70,7 @@
 	  		Birch Beverage Menu
 	  	</h1>
 	  	<p class="text-body">
-	  		Looking to sip on something truly unique? <a href="#">Browse our drink menu</a> for a taste of what we can 
+	  		Looking to sip on something truly unique? <a href="{{config.menuFileLocation}}">Browse our drink menu</a> for a taste of what we can 
 
 			serve up. Once you have confirmed your booking, we offer a complimentary 30-minute session 
 
@@ -79,6 +80,7 @@
 	  	</p>	
 	  </div>
 	</div>
+	{% endif %}
 	<hr>
 	<div class="row">
 	  <div class="col-md-8 col-xs-12 col-md-offset-2">
@@ -98,54 +100,35 @@
 	  <div class="col-md-12 text-center">
 		<div class="row">
 		  <div class="col-xs-6 col-sm-4">
-            {% image '@StasmoBirchBundle/Resources/public/images/album/1.jpg' %}
-		  	<a href="{{ asset_url }}" data-lightbox="album">
-		  	{% endimage %}
-            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/1.jpg' %}
-		  		<img src="{{ asset_url }}" class="img-thumbnail img-responsive">
-		  	{% endimage %}		  
+		  	<a href="{{ asset('bundles/stasmobirch/images/album/1.jpg') }}" data-lightbox="album">
+		  		<img src="{{ asset('bundles/stasmobirch/images/thumbs/1.jpg')}}" class="img-thumbnail img-responsive">
+		  	</a>
 		  </div>
 		  <div class="col-xs-6 col-sm-4">
-            {% image '@StasmoBirchBundle/Resources/public/images/album/2.jpg' %}
-		  	<a href="{{ asset_url }}" data-lightbox="album">
-		  	{% endimage %}
-            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/2.jpg' %}
-		  		<img src="{{ asset_url }}" class="img-thumbnail img-responsive">
-		  	{% endimage %}
-	  	  </div>
-		  <div class="hidden-xs col-sm-4">
-            {% image '@StasmoBirchBundle/Resources/public/images/album/3.jpg' %}
-		  	<a href="{{ asset_url }}" data-lightbox="album">
-		  	{% endimage %}
-            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/3.jpg' %}
-		  		<img src="{{ asset_url }}" class="img-thumbnail img-responsive">
-		  	{% endimage %}
+		  	<a href="{{ asset('bundles/stasmobirch/images/album/2.jpg') }}" data-lightbox="album">
+		  		<img src="{{ asset('bundles/stasmobirch/images/thumbs/2.jpg')}}" class="img-thumbnail img-responsive">
+		  	</a>
+		  </div>
+		  <div class="col-xs-6 col-sm-4">
+		  	<a href="{{ asset('bundles/stasmobirch/images/album/3.jpg') }}" data-lightbox="album">
+		  		<img src="{{ asset('bundles/stasmobirch/images/thumbs/3.jpg')}}" class="img-thumbnail img-responsive">
+		  	</a>
 		  </div>
 	  	</div>
 		<div class="row">
 		  <div class="col-xs-6 col-sm-4">
-            {% image '@StasmoBirchBundle/Resources/public/images/album/4.jpg' %}
-		  	<a href="{{ asset_url }}" data-lightbox="album">
-		  	{% endimage %}
-            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/4.jpg' %}
-		  		<img src="{{ asset_url }}" class="img-thumbnail img-responsive">
-		  	{% endimage %}
-	  	  </div>
+		  	<a href="{{ asset('bundles/stasmobirch/images/album/4.jpg') }}" data-lightbox="album">
+		  		<img src="{{ asset('bundles/stasmobirch/images/thumbs/4.jpg')}}" class="img-thumbnail img-responsive">
+		  	</a>
+		  </div>
 		  <div class="col-xs-6 col-sm-4">
-            {% image '@StasmoBirchBundle/Resources/public/images/album/5.jpg' %}
-		  	<a href="{{ asset_url }}" data-lightbox="album">
-		  	{% endimage %}
-            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/5.jpg' %}
-		  		<img src="{{ asset_url }}" class="img-thumbnail img-responsive">
-		  	{% endimage %}
-	  	  </div>
-		  <div class="hidden-xs col-sm-4">
-            {% image '@StasmoBirchBundle/Resources/public/images/album/6.jpg' %}
-		  	<a href="{{ asset_url }}" data-lightbox="album">
-		  	{% endimage %}
-            {% image '@StasmoBirchBundle/Resources/public/images/thumbs/6.jpg' %}
-		  		<img src="{{ asset_url }}" class="img-thumbnail img-responsive">
-		  	{% endimage %}
+		  	<a href="{{ asset('bundles/stasmobirch/images/album/5.jpg') }}" data-lightbox="album">
+		  		<img src="{{ asset('bundles/stasmobirch/images/thumbs/5.jpg')}}" class="img-thumbnail img-responsive">
+		  	</a>
+		  </div>
+		  <div class="col-xs-6 col-sm-4">
+		  	<a href="{{ asset('bundles/stasmobirch/images/album/6.jpg') }}" data-lightbox="album">
+		  		<img src="{{ asset('bundles/stasmobirch/images/thumbs/6.jpg')}}" class="img-thumbnail img-responsive">
 		  	</a>
 		  </div>
 	  	</div>
@@ -183,10 +166,10 @@
 			    <div class="row">
 					<div class="col-xs-12 col-sm-8">
 						<h3>Hours</h3>
-						{{ form_row(form.eventDate, { 'label_col': 4, 'widget_col': 8}) }}
-						{{ form_row(form.eventStart, { 'label_col': 4, 'widget_col': 8}) }}
-						{{ form_row(form.eventEnd, { 'label_col': 4, 'widget_col': 8}) }}
-						{{ form_row(form.numberOfGuests, { 'label_col': 4, 'widget_col': 3}) }}
+						{{ form_row(form.eventDate, { 'label_col': 3, 'widget_col': 9}) }}
+						{{ form_row(form.eventStart, { 'label_col': 3, 'widget_col': 9}) }}
+						{{ form_row(form.eventEnd, { 'label_col': 3, 'widget_col': 9}) }}
+						{{ form_row(form.numberOfGuests, { 'label_col': 3, 'widget_col': 3}) }}
 					</div>
 					<div class="col-xs-12 col-sm-4">
 						<h3>Event Type</h3>
@@ -215,14 +198,18 @@
 		<div class="col-sm-12">
 			<h4>Connect with us</h4>
 			<p>
+			{% if config.showFacebook %}
             {% image '@StasmoBirchBundle/Resources/public/images/thumbs/FaceBook.png' %}
-			<img src="{{ asset_url }}" class="img-rounded social-media">
+			<a href="{{ config.facebookLink }}"><img src="{{ asset_url }}" class="img-rounded social-media"></a>
 			{% endimage %}
+			{% endif %}
+			{% if config.showTwitter %}
             {% image '@StasmoBirchBundle/Resources/public/images/thumbs/Twitter.png' %}
-			<img src="{{ asset_url }}" class="img-rounded social-media">
+			<a href="{{ config.facebookLink }}"><img src="{{ asset_url }}" class="img-rounded social-media"></a>
 			{% endimage %}
+			{% endif %}
             {% image '@StasmoBirchBundle/Resources/public/images/thumbs/Mail.png' %}
-			<img src="{{ asset_url }}" class="img-rounded social-media">
+			<a href="mailto:birchbartending@gmail.com"><img src="{{ asset_url }}" class="img-rounded social-media"></a>
 			{% endimage %}
 			</p>
 		</div>
